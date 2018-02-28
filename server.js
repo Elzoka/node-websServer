@@ -51,6 +51,12 @@ app.get("/bad", (req, res) => {
     errorMessage: "this page is corrupted"
   });
 });
+app.get("/portfolio", (req, res) => {
+  res.render("portfolio", {
+    pageTitle: "Portfolio",
+    message: "portfolio Website"
+  })
+});
 
 app.listen(port, () => {
   console.log(`The server is up on port ${port}`);
